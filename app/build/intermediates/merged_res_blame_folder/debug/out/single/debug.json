@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/mipmap-hdpi_ic_app_icon.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/mipmap-hdpi/ic_app_icon.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_done.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_done.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_content_splash.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/content_splash.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable-xxhdpi_ic_menu.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable-xxhdpi/ic_menu.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_messages_icon.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/messages_icon.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/anim_fadein.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/anim/fadein.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_fragment_notification.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/fragment_notification.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_settings_icon.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/settings_icon.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_action_delete.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_action_delete.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/menu_activity_home_drawer.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/menu/activity_home_drawer.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_bg_nav_header_home.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/bg_nav_header_home.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_user_logo.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_user_logo.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_exit_to_app_black_48dp.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_exit_to_app_black_48dp.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_settings_black_48dp.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_settings_black_48dp.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_nav_header_home.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/nav_header_home.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_tag_item.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/tag_item.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_app_bar_home.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/app_bar_home.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_fragment_settings.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/xml_backup_descriptor.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/xml/backup_descriptor.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_message_item.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/message_item.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_bg_round_avatar.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/bg_round_avatar.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_imiconnect_logo.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_imiconnect_logo.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_account_remove_black_48dp.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_account_remove_black_48dp.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_activity_splash.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_activity_login.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/menu_activity_login_menu.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/menu/activity_login_menu.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_activity_deep_link.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/activity_deep_link.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_format_list_bulleted_black_48dp.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_format_list_bulleted_black_48dp.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable-anydpi-v21_ic_menu_slideshow.xml.flat",
+        "source": "com.imimobile.connectdemo.app-pngs-1:/drawable-anydpi-v21/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_fragment_tags.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/fragment_tags.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_topics_icon.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/topics_icon.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_notification_item.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/notification_item.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_activity_home.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable-hdpi_ic_menu.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable-hdpi/ic_menu.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable_ic_refresh.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable/ic_refresh.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_activity_launch.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/activity_launch.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable-xhdpi_ic_menu.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable-xhdpi/ic_menu.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_activity_tags.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/activity_tags.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/menu_fragment_push_notification_menu.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/menu/fragment_push_notification_menu.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/layout_content_home.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/layout/content_home.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/anim_fadeout.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/anim/fadeout.xml"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/drawable-mdpi_ic_menu.png.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/drawable-mdpi/ic_menu.png"
+    },
+    {
+        "merged": "com.imimobile.connectdemo.app-merged_res-6:/xml_provider_paths.xml.flat",
+        "source": "com.imimobile.connectdemo.app-main-8:/xml/provider_paths.xml"
+    }
+]

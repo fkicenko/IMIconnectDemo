@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+android {
+
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.imimobile.connectdemo"
+        minSdkVersion 19
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/LICENSE']
+        }
+    }
+
+
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        imiconnect {
+            keyAlias ''
+            keyPassword ''
+            storeFile file('../imiconnect.jks')
+            storePassword ''
+        }
+    }
+
+    buildTypes {
+        debug {
+//            signingConfig signingConfigs.imiconnect
+            debuggable true
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.imiconnect
+        }
+    }
+    namespace 'com.imimobile.connectdemo'
+}
+
+dependencies {
+    def emoji2_version = "1.2.0"
+
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/IMIconnectUI.aar')
+
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.4.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testImplementation 'junit:junit:4.13.2'
+
+    implementation 'androidx.core:core:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    // Room components
+    implementation 'androidx.room:room-runtime:2.4.3'
+    annotationProcessor 'androidx.room:room-compiler:2.4.3'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation files(':IMIconnectUI')
+    implementation files('libs/IMIconnectCore.aar')
+
+    /*implementation "androidx.emoji2:emoji2:$emoji2_version"
+    implementation "androidx.emoji2:emoji2-views:$emoji2_version"
+    implementation "androidx.emoji2:emoji2-views-helper:$emoji2_version"*/
+    implementation 'androidx.emoji:emoji:1.1.0'
+    implementation 'androidx.emoji:emoji-bundled:1.1.0'
+
+    implementation "androidx.sqlite:sqlite:2.2.0"
+    implementation "androidx.work:work-runtime:2.7.1"
+    implementation "net.zetetic:android-database-sqlcipher:4.4.3@aar"
+    implementation 'org.eclipse.jetty:jetty-websocket:8.1.17.v20150415'
+    implementation "com.google.firebase:firebase-messaging:23.0.8"
+    implementation "com.google.android.gms:play-services-base:18.1.0"
+    implementation "com.google.android.gms:play-services-location:20.0.0"
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'

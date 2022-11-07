@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.imimobile.rtm.client.activities.MainActivity">
+
+    <item
+        android:id="@+id/action_regenrate"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="100"
+        android:title="Re genrate pin"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_register"
+        android:icon="@drawable/ic_done"
+        android:orderInCategory="100"
+        android:title="Register"
+        app:showAsAction="always" />
+
+</menu>

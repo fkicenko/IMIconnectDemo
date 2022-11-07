@@ -1,0 +1,744 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.imimobile.connectdemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml
+10
+11    <!-- PERMISSIONS -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:7:5-74
+13-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:7:22-72
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:8:5-78
+14-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:8:22-76
+15    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+15-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:9:5-70
+15-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:9:22-68
+16    <!-- REQUIRED for connecting to IMIconnect -->
+17    <uses-permission android:name="android.permission.WAKE_LOCK" />
+17-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:11:5-68
+17-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:11:22-65
+18    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+18-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:12:5-81
+18-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:12:22-78
+19    <!-- IMI UI -->
+20    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+20-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:14:5-70
+20-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:14:22-68
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:15:5-64
+21-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:15:22-62
+22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+22-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:16:5-80
+22-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:16:22-78
+23    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+23-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:17:5-79
+23-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:17:22-77
+24    <!-- OPTIONAL add this permission if you wish to monitor location -->
+25    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+25-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:19:5-81
+25-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:19:22-78
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:20:5-79
+26-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:20:22-76
+27    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+27-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:21:5-85
+27-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:21:22-82
+28
+29    <!-- OPTIONAL add this permission if you wish to use Two factor authentication -->
+30    <uses-permission android:name="android.permission.READ_SMS" />
+30-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:24:5-67
+30-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:24:22-64
+31    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+31-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:25:5-70
+31-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:25:22-67
+32
+33    <!-- Push message's permissions -->
+34    <!-- REQUIRED to receive push notification -->
+35    <permission
+36        android:name="com.imimobile.connectdemo.permission.C2D_MESSAGE"
+36-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:30:9-63
+37        android:exported="false"
+37-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:32:9-33
+38        android:protectionLevel="signature" />
+38-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:31:9-44
+39
+40    <uses-permission android:name="com.imimobile.connectdemo.permission.C2D_MESSAGE" />
+40-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:34:22-76
+41    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+41-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:35:5-82
+41-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:35:22-79
+42
+43    <!-- Required runtime permission to display push notifications on Android 13 -->
+44    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+44-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:14:5-77
+44-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:14:22-74
+45    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+45-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:5-77
+45-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:22-74
+46
+47    <permission
+47-->[androidx.core:core:1.9.0] C:\Users\frkic\.gradle\caches\transforms-3\bff35d83891045e885dead0c361338b2\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+48        android:name="com.imimobile.connectdemo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+48-->[androidx.core:core:1.9.0] C:\Users\frkic\.gradle\caches\transforms-3\bff35d83891045e885dead0c361338b2\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+49        android:protectionLevel="signature" />
+49-->[androidx.core:core:1.9.0] C:\Users\frkic\.gradle\caches\transforms-3\bff35d83891045e885dead0c361338b2\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+50
+51    <uses-permission android:name="com.imimobile.connectdemo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Application -->
+51-->[androidx.core:core:1.9.0] C:\Users\frkic\.gradle\caches\transforms-3\bff35d83891045e885dead0c361338b2\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+51-->[androidx.core:core:1.9.0] C:\Users\frkic\.gradle\caches\transforms-3\bff35d83891045e885dead0c361338b2\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+52    <application
+52-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:38:5-112:19
+53        android:name="com.imimobile.connectdemo.DemoApplication"
+53-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:39:9-40
+54        android:allowBackup="true"
+54-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:40:9-35
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.9.0] C:\Users\frkic\.gradle\caches\transforms-3\bff35d83891045e885dead0c361338b2\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+56        android:configChanges="orientation"
+56-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:41:9-44
+57        android:debuggable="true"
+58        android:fullBackupContent="@xml/backup_descriptor"
+58-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:47:9-59
+59        android:icon="@mipmap/ic_app_icon"
+59-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:42:9-43
+60        android:label="@string/app_name"
+60-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:43:9-41
+61        android:screenOrientation="portrait"
+61-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:44:9-45
+62        android:supportsRtl="true"
+62-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:45:9-35
+63        android:theme="@style/AppTheme" >
+63-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:46:9-40
+64
+65        <!--
+66             MANDATORY: In order to receiving incoming In App and Push Messages, you must either:
+67            1. Register the standard ICMessagingReceiver and register a ICMessagingListener with the ICMessaging class, or
+68            2. Register a subclass of ICMessagingReceiver and override class methods
+69        -->
+70        <receiver
+70-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:52:9-63:20
+71            android:name="com.imimobile.connectdemo.receivers.MessageReceiver"
+71-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:53:13-54
+72            android:enabled="true"
+72-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:54:13-35
+73            android:exported="false"
+73-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:55:13-37
+74            android:permission="com.imimobile.connect.core.permission.PUSH_PERMISSION" >
+74-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:56:13-87
+75            <intent-filter>
+75-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:57:13-62:29
+76                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+76-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:58:17-86
+76-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:58:25-83
+77                <action android:name="com.imimobile.connect.core.rtmevent" />
+77-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:59:17-78
+77-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:59:25-75
+78                <action android:name="com.imimobile.connect.core.notification.click" />
+78-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:60:17-88
+78-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:60:25-85
+79                <action android:name="com.imimobile.connect.core.intent.notification.RECEIVE" />
+79-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:61:17-97
+79-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:61:25-94
+80            </intent-filter>
+81        </receiver>
+82
+83        <provider
+84            android:name="com.imimobile.connectdemo.utils.MyFileProvider"
+84-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:65:13-74
+85            android:authorities="com.imimobile.connectdemo.fileprovider"
+85-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:66:13-64
+86            android:exported="false"
+86-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:67:13-37
+87            android:grantUriPermissions="true" >
+87-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:68:13-47
+88            <meta-data
+88-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:69:13-71:57
+89                android:name="android.support.FILE_PROVIDER_PATHS"
+89-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:70:17-67
+90                android:resource="@xml/provider_paths" />
+90-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:71:17-55
+91        </provider>
+92
+93        <activity
+93-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:73:9-82:20
+94            android:name="com.imimobile.connectdemo.SplashActivity"
+94-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:74:13-43
+95            android:exported="true"
+95-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:76:13-36
+96            android:theme="@style/AppTheme" >
+96-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:75:13-44
+97            <intent-filter>
+97-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:77:13-81:29
+98                <action android:name="android.intent.action.MAIN" />
+98-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:78:17-69
+98-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:78:25-66
+99
+100                <category android:name="android.intent.category.LAUNCHER" />
+100-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:80:17-77
+100-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:80:27-74
+101            </intent-filter>
+102        </activity>
+103        <activity
+103-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:84:9-86:47
+104            android:name="com.imimobile.connectdemo.LaunchActivity"
+104-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:85:13-43
+105            android:theme="@style/AppTheme" />
+105-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:86:13-44
+106        <activity
+106-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:88:9-91:47
+107            android:name="com.imimobile.connectdemo.LoginActivity"
+107-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:89:13-42
+108            android:label="@string/title_activity_login"
+108-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:90:13-57
+109            android:theme="@style/AppTheme" />
+109-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:91:13-44
+110        <activity
+110-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:93:9-96:47
+111            android:name="com.imimobile.connectdemo.HomeActivity"
+111-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:94:13-41
+112            android:label="@string/app_name"
+112-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:95:13-45
+113            android:theme="@style/AppTheme" />
+113-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:96:13-44
+114        <activity
+114-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:98:9-110:20
+115            android:name="com.imimobile.connectdemo.DeepLinkActivity"
+115-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:98:19-51
+116            android:exported="true" >
+116-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:99:13-36
+117            <intent-filter>
+117-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:100:13-109:29
+118                <action android:name="android.intent.action.VIEW" />
+118-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:101:17-69
+118-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:101:25-66
+119
+120                <data
+120-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:102:17-105:54
+121                    android:host="command"
+121-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:103:21-43
+122                    android:scheme="SD27112105" />
+122-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:104:21-48
+123
+124                <category android:name="android.intent.category.DEFAULT" />
+124-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:107:17-76
+124-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:107:27-73
+125                <category android:name="android.intent.category.BROWSABLE" />
+125-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:108:17-78
+125-->C:\Android_Dev\Android\GMS\SampleApp\IMIconnectDemo\app\src\main\AndroidManifest.xml:108:27-75
+126            </intent-filter>
+127        </activity>
+128        <activity
+128-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:23:9-26:75
+129            android:name="com.imimobile.connect.ui.internal.permission.PermissionActivity"
+129-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:24:13-91
+130            android:exported="false"
+130-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:25:13-37
+131            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+131-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:26:13-72
+132        <activity
+132-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:27:9-30:75
+133            android:name="com.imimobile.connect.ui.internal.composer.activity.AudioRecorderActivity"
+133-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:28:13-101
+134            android:exported="false"
+134-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:29:13-37
+135            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+135-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:30:13-72
+136        <activity
+136-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:31:9-35:70
+137            android:name="com.imimobile.connect.ui.internal.activity.ImagePreviewActivity"
+137-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:32:13-91
+138            android:exported="false"
+138-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:33:13-37
+139            android:label="@string/image_preview"
+139-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:34:13-50
+140            android:windowSoftInputMode="stateHidden|adjustResize" />
+140-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:35:13-67
+141        <activity
+141-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:36:9-38:39
+142            android:name="com.imimobile.connect.ui.conversation.ICConversationActivity"
+142-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:37:13-88
+143            android:exported="true" />
+143-->[IMIconnectUI.aar] C:\Users\frkic\.gradle\caches\transforms-3\cc01e08be3ca40ff4bd4a04c400406cd\transformed\jetified-IMIconnectUI\AndroidManifest.xml:38:13-36
+144
+145        <service
+145-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:17:9-23:19
+146            android:name="com.imimobile.connect.core.push.ICFirebaseMessagingService"
+146-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:18:13-86
+147            android:exported="false" >
+147-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:19:13-37
+148            <intent-filter android:priority="-1" >
+148-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:20:13-22:29
+148-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:20:28-49
+149                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+149-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:21:17-78
+149-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:21:25-75
+150            </intent-filter>
+151        </service>
+152
+153        <activity
+153-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:25:9-29:52
+154            android:name="com.imimobile.connect.core.internal.activities.WebViewActivity"
+154-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:26:13-90
+155            android:exported="false"
+155-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:27:13-37
+156            android:label="@string/app_name"
+156-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:28:13-45
+157            android:screenOrientation="portrait" />
+157-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:29:13-49
+158        <activity
+158-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:30:9-36:56
+159            android:name="com.imimobile.connect.core.internal.activities.ReplyActivity"
+159-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:31:13-88
+160            android:excludeFromRecents="true"
+160-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:32:13-46
+161            android:exported="false"
+161-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:33:13-37
+162            android:label="@string/app_name"
+162-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:34:13-45
+163            android:screenOrientation="portrait"
+163-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:35:13-49
+164            android:theme="@style/Theme.Transparent" />
+164-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:36:13-53
+165        <activity
+165-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:37:9-40:75
+166            android:name="com.imimobile.connect.core.internal.permission.PermissionActivity"
+166-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:38:13-93
+167            android:exported="false"
+167-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:39:13-37
+168            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+168-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:40:13-72
+169        <activity
+169-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:41:9-44:75
+170            android:name="com.imimobile.connect.core.internal.activities.NotificationActionProxyActivity"
+170-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:42:13-106
+171            android:exported="false"
+171-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:43:13-37
+172            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+172-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:44:13-72
+173
+174        <service
+174-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:46:9-48:40
+175            android:name="org.eclipse.paho.android.service.MqttService"
+175-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:47:13-72
+176            android:exported="false" />
+176-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:48:13-37
+177        <service
+177-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:49:9-52:72
+178            android:name="com.imimobile.connect.core.internal.services.ImageLoaderJobService"
+178-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:50:13-94
+179            android:exported="false"
+179-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:51:13-37
+180            android:permission="android.permission.BIND_JOB_SERVICE" />
+180-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:52:13-69
+181
+182        <receiver
+182-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:54:9-61:20
+183            android:name="com.imimobile.connect.core.internal.services.BootCompleteReceiver"
+183-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:55:13-93
+184            android:enabled="true"
+184-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:56:13-35
+185            android:exported="true" >
+185-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:57:13-36
+186            <intent-filter>
+186-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:58:13-60:29
+187                <action android:name="android.intent.action.BOOT_COMPLETED" />
+187-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:59:17-79
+187-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:59:25-76
+188            </intent-filter>
+189        </receiver>
+190
+191        <service
+191-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:63:9-65:40
+192            android:name="com.imimobile.connect.core.internal.filemanager.download.services.FileDownloadService"
+192-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:64:13-113
+193            android:exported="false" />
+193-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:65:13-37
+194        <service
+194-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:66:9-69:72
+195            android:name="com.imimobile.connect.core.internal.filemanager.download.services.FileDownloadJobService"
+195-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:67:13-116
+196            android:exported="false"
+196-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:68:13-37
+197            android:permission="android.permission.BIND_JOB_SERVICE" />
+197-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:69:13-69
+198
+199        <receiver
+199-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:71:9-74:20
+200            android:name="com.imimobile.connect.core.internal.geofence.GeofenceTransitionsBroadcastReceiver"
+200-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:72:13-109
+201            android:exported="true" >
+201-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:73:13-36
+202        </receiver>
+203
+204        <service
+204-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:76:9-79:72
+205            android:name="com.imimobile.connect.core.internal.geofence.GeofenceTransitionsJobIntentService"
+205-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:77:13-108
+206            android:exported="false"
+206-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:78:13-37
+207            android:permission="android.permission.BIND_JOB_SERVICE" />
+207-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:79:13-69
+208
+209        <receiver
+209-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:81:9-87:20
+210            android:name="com.imimobile.connect.core.internal.monitoring.LocationUpdatesBroadcastReceiver"
+210-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:82:13-107
+211            android:exported="true" >
+211-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:83:13-36
+212            <intent-filter>
+212-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:84:13-86:29
+213                <action android:name="com.imimobile.connect.core.internal.monitoring.LocationUpdatesBroadcastReceiver.Action" />
+213-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:85:17-129
+213-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:85:25-126
+214            </intent-filter>
+215        </receiver>
+216
+217        <provider
+217-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:31:9-39:20
+218            android:name="androidx.startup.InitializationProvider"
+218-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:32:13-67
+219            android:authorities="com.imimobile.connectdemo.androidx-startup"
+219-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:33:13-68
+220            android:exported="false" >
+220-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:34:13-37
+221            <meta-data
+221-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:36:13-38:52
+222                android:name="androidx.work.WorkManagerInitializer"
+222-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:37:17-68
+223                android:value="androidx.startup" />
+223-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:38:17-49
+224            <meta-data
+224-->[androidx.emoji2:emoji2:1.2.0] C:\Users\frkic\.gradle\caches\transforms-3\61c70faebd8dc05c2f638d8a83629c99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+225                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+225-->[androidx.emoji2:emoji2:1.2.0] C:\Users\frkic\.gradle\caches\transforms-3\61c70faebd8dc05c2f638d8a83629c99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+226                android:value="androidx.startup" />
+226-->[androidx.emoji2:emoji2:1.2.0] C:\Users\frkic\.gradle\caches\transforms-3\61c70faebd8dc05c2f638d8a83629c99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+227            <meta-data
+227-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\frkic\.gradle\caches\transforms-3\319e7a49230979a1b3c44d1c0e33441b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+228                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+228-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\frkic\.gradle\caches\transforms-3\319e7a49230979a1b3c44d1c0e33441b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+229                android:value="androidx.startup" />
+229-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\frkic\.gradle\caches\transforms-3\319e7a49230979a1b3c44d1c0e33441b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+230        </provider>
+231
+232        <service
+232-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:41:9-46:35
+233            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+233-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:42:13-88
+234            android:directBootAware="false"
+234-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:43:13-44
+235            android:enabled="@bool/enable_system_alarm_service_default"
+235-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:44:13-72
+236            android:exported="false" />
+236-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:45:13-37
+237        <service
+237-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:47:9-53:35
+238            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+238-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:48:13-84
+239            android:directBootAware="false"
+239-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:49:13-44
+240            android:enabled="@bool/enable_system_job_service_default"
+240-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:50:13-70
+241            android:exported="true"
+241-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:51:13-36
+242            android:permission="android.permission.BIND_JOB_SERVICE" />
+242-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:52:13-69
+243        <service
+243-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:54:9-59:35
+244            android:name="androidx.work.impl.foreground.SystemForegroundService"
+244-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:55:13-81
+245            android:directBootAware="false"
+245-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:56:13-44
+246            android:enabled="@bool/enable_system_foreground_service_default"
+246-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:57:13-77
+247            android:exported="false" />
+247-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:58:13-37
+248
+249        <receiver
+249-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:61:9-66:35
+250            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+250-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:62:13-88
+251            android:directBootAware="false"
+251-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:63:13-44
+252            android:enabled="true"
+252-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:64:13-35
+253            android:exported="false" />
+253-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:65:13-37
+254        <receiver
+254-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:67:9-77:20
+255            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+255-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:68:13-106
+256            android:directBootAware="false"
+256-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:69:13-44
+257            android:enabled="false"
+257-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:70:13-36
+258            android:exported="false" >
+258-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:71:13-37
+259            <intent-filter>
+259-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:73:13-76:29
+260                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+260-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:17-87
+260-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:25-84
+261                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+261-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:17-90
+261-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:25-87
+262            </intent-filter>
+263        </receiver>
+264        <receiver
+264-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:78:9-88:20
+265            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+265-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:79:13-104
+266            android:directBootAware="false"
+266-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:80:13-44
+267            android:enabled="false"
+267-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:81:13-36
+268            android:exported="false" >
+268-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:82:13-37
+269            <intent-filter>
+269-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:84:13-87:29
+270                <action android:name="android.intent.action.BATTERY_OKAY" />
+270-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:17-77
+270-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:25-74
+271                <action android:name="android.intent.action.BATTERY_LOW" />
+271-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:17-76
+271-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:25-73
+272            </intent-filter>
+273        </receiver>
+274        <receiver
+274-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:89:9-99:20
+275            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+275-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:90:13-104
+276            android:directBootAware="false"
+276-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:91:13-44
+277            android:enabled="false"
+277-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:92:13-36
+278            android:exported="false" >
+278-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:93:13-37
+279            <intent-filter>
+279-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:95:13-98:29
+280                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+280-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:17-83
+280-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:25-80
+281                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+281-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:17-82
+281-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:25-79
+282            </intent-filter>
+283        </receiver>
+284        <receiver
+284-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:100:9-109:20
+285            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+285-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:101:13-103
+286            android:directBootAware="false"
+286-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:102:13-44
+287            android:enabled="false"
+287-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:103:13-36
+288            android:exported="false" >
+288-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:104:13-37
+289            <intent-filter>
+289-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:106:13-108:29
+290                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+290-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:17-79
+290-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:25-76
+291            </intent-filter>
+292        </receiver>
+293        <receiver
+293-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:110:9-121:20
+294            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+294-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:111:13-88
+295            android:directBootAware="false"
+295-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:112:13-44
+296            android:enabled="false"
+296-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:113:13-36
+297            android:exported="false" >
+297-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:114:13-37
+298            <intent-filter>
+298-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:116:13-120:29
+299                <action android:name="android.intent.action.BOOT_COMPLETED" />
+299-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:59:17-79
+299-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:59:25-76
+300                <action android:name="android.intent.action.TIME_SET" />
+300-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:17-73
+300-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:25-70
+301                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+301-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:17-81
+301-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:25-78
+302            </intent-filter>
+303        </receiver>
+304        <receiver
+304-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:122:9-131:20
+305            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+305-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:123:13-99
+306            android:directBootAware="false"
+306-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:124:13-44
+307            android:enabled="@bool/enable_system_alarm_service_default"
+307-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:125:13-72
+308            android:exported="false" >
+308-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:126:13-37
+309            <intent-filter>
+309-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:128:13-130:29
+310                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+310-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:17-98
+310-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:25-95
+311            </intent-filter>
+312        </receiver>
+313        <receiver
+313-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:132:9-142:20
+314            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+314-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:133:13-78
+315            android:directBootAware="false"
+315-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:134:13-44
+316            android:enabled="true"
+316-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:135:13-35
+317            android:exported="true"
+317-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:136:13-36
+318            android:permission="android.permission.DUMP" >
+318-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:137:13-57
+319            <intent-filter>
+319-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:139:13-141:29
+320                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+320-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:17-88
+320-->[androidx.work:work-runtime:2.7.1] C:\Users\frkic\.gradle\caches\transforms-3\1c117a71c2bcb67186ce40881e48a2c4\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:25-85
+321            </intent-filter>
+322        </receiver>
+323        <receiver
+323-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:32:9-39:20
+324            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+324-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:33:13-78
+325            android:exported="true"
+325-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:34:13-36
+326            android:permission="com.google.android.c2dm.permission.SEND" >
+326-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:35:13-73
+327            <intent-filter>
+327-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:36:13-38:29
+328                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+328-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:37:17-81
+328-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:37:25-78
+329            </intent-filter>
+330        </receiver>
+331        <!--
+332             FirebaseMessagingService performs security checks at runtime,
+333             but set to not exported to explicitly avoid allowing another app to call it.
+334        -->
+335        <service
+335-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:45:9-52:19
+336            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+336-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:46:13-82
+337            android:directBootAware="true"
+337-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:47:13-43
+338            android:exported="false" >
+338-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:48:13-37
+339            <intent-filter android:priority="-500" >
+339-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:20:13-22:29
+339-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:20:28-49
+340                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+340-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:21:17-78
+340-->[IMIconnectCore.aar] C:\Users\frkic\.gradle\caches\transforms-3\e6b339381cffa528be95c7a0ba042691\transformed\jetified-IMIconnectCore\AndroidManifest.xml:21:25-75
+341            </intent-filter>
+342        </service>
+343        <service
+343-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:53:9-59:19
+344            android:name="com.google.firebase.components.ComponentDiscoveryService"
+344-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:54:13-84
+345            android:directBootAware="true"
+345-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:35:13-43
+346            android:exported="false" >
+346-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:55:13-37
+347            <meta-data
+347-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:56:13-58:85
+348                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+348-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:57:17-119
+349                android:value="com.google.firebase.components.ComponentRegistrar" />
+349-->[com.google.firebase:firebase-messaging:23.0.8] C:\Users\frkic\.gradle\caches\transforms-3\cb62a236964662e9a82062f593843473\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:58:17-82
+350            <meta-data
+350-->[com.google.firebase:firebase-datatransport:18.1.6] C:\Users\frkic\.gradle\caches\transforms-3\550cda55acda2243963ac1a914c16122\transformed\jetified-firebase-datatransport-18.1.6\AndroidManifest.xml:28:13-30:85
+351                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+351-->[com.google.firebase:firebase-datatransport:18.1.6] C:\Users\frkic\.gradle\caches\transforms-3\550cda55acda2243963ac1a914c16122\transformed\jetified-firebase-datatransport-18.1.6\AndroidManifest.xml:29:17-115
+352                android:value="com.google.firebase.components.ComponentRegistrar" />
+352-->[com.google.firebase:firebase-datatransport:18.1.6] C:\Users\frkic\.gradle\caches\transforms-3\550cda55acda2243963ac1a914c16122\transformed\jetified-firebase-datatransport-18.1.6\AndroidManifest.xml:30:17-82
+353            <meta-data
+353-->[com.google.firebase:firebase-installations:17.0.2] C:\Users\frkic\.gradle\caches\transforms-3\4de391896d493bbfcd1cc7183ae587b2\transformed\jetified-firebase-installations-17.0.2\AndroidManifest.xml:18:13-20:85
+354                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+354-->[com.google.firebase:firebase-installations:17.0.2] C:\Users\frkic\.gradle\caches\transforms-3\4de391896d493bbfcd1cc7183ae587b2\transformed\jetified-firebase-installations-17.0.2\AndroidManifest.xml:19:17-127
+355                android:value="com.google.firebase.components.ComponentRegistrar" />
+355-->[com.google.firebase:firebase-installations:17.0.2] C:\Users\frkic\.gradle\caches\transforms-3\4de391896d493bbfcd1cc7183ae587b2\transformed\jetified-firebase-installations-17.0.2\AndroidManifest.xml:20:17-82
+356        </service>
+357
+358        <activity
+358-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\53243bbeaf311dcd367ce270004bbd0e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+359            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+359-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\53243bbeaf311dcd367ce270004bbd0e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+360            android:exported="false"
+360-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\53243bbeaf311dcd367ce270004bbd0e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+361            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+361-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\53243bbeaf311dcd367ce270004bbd0e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+362
+363        <provider
+363-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:26:9-31:39
+364            android:name="com.google.firebase.provider.FirebaseInitProvider"
+364-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:27:13-77
+365            android:authorities="com.imimobile.connectdemo.firebaseinitprovider"
+365-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:28:13-72
+366            android:directBootAware="true"
+366-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:29:13-43
+367            android:exported="false"
+367-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:30:13-37
+368            android:initOrder="100" />
+368-->[com.google.firebase:firebase-common:20.1.2] C:\Users\frkic\.gradle\caches\transforms-3\a13401255581ae1cef03292f799899cd\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:31:13-36
+369
+370        <meta-data
+370-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\e6ded08d67897445da79b5de8b67df66\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+371            android:name="com.google.android.gms.version"
+371-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\e6ded08d67897445da79b5de8b67df66\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+372            android:value="@integer/google_play_services_version" />
+372-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\frkic\.gradle\caches\transforms-3\e6ded08d67897445da79b5de8b67df66\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+373
+374        <service
+374-->[androidx.room:room-runtime:2.4.3] C:\Users\frkic\.gradle\caches\transforms-3\170d443ccb60926df951a4d54df2641f\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+375            android:name="androidx.room.MultiInstanceInvalidationService"
+375-->[androidx.room:room-runtime:2.4.3] C:\Users\frkic\.gradle\caches\transforms-3\170d443ccb60926df951a4d54df2641f\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
+376            android:directBootAware="true"
+376-->[androidx.room:room-runtime:2.4.3] C:\Users\frkic\.gradle\caches\transforms-3\170d443ccb60926df951a4d54df2641f\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+377            android:exported="false" />
+377-->[androidx.room:room-runtime:2.4.3] C:\Users\frkic\.gradle\caches\transforms-3\170d443ccb60926df951a4d54df2641f\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+378        <service
+378-->[com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\56d07ebe54dfef9e25d4718fdf379a1d\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:29:9-35:19
+379            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+379-->[com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\56d07ebe54dfef9e25d4718fdf379a1d\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:30:13-103
+380            android:exported="false" >
+380-->[com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\56d07ebe54dfef9e25d4718fdf379a1d\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:31:13-37
+381            <meta-data
+381-->[com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\56d07ebe54dfef9e25d4718fdf379a1d\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:32:13-34:39
+382                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+382-->[com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\56d07ebe54dfef9e25d4718fdf379a1d\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:33:17-94
+383                android:value="cct" />
+383-->[com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\56d07ebe54dfef9e25d4718fdf379a1d\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:34:17-36
+384        </service>
+385        <service
+385-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:26:9-30:19
+386            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+386-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:27:13-117
+387            android:exported="false"
+387-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:28:13-37
+388            android:permission="android.permission.BIND_JOB_SERVICE" >
+388-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:29:13-69
+389        </service>
+390
+391        <receiver
+391-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:32:9-34:40
+392            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+392-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:33:13-132
+393            android:exported="false" />
+393-->[com.google.android.datatransport:transport-runtime:3.1.7] C:\Users\frkic\.gradle\caches\transforms-3\fc8252ffe8d2c03edafd3ab53077d200\transformed\jetified-transport-runtime-3.1.7\AndroidManifest.xml:34:13-37
+394    </application>
+395
+396</manifest>

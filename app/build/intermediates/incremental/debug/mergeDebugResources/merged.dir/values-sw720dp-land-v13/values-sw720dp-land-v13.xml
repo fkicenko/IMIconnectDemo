@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_conversation_my_margin_left">300dp</dimen>
+    <dimen name="default_conversation_myunread_margin_left">300dp</dimen>
+    <dimen name="default_conversation_their_margin_right">300dp</dimen>
+    <dimen name="generic_template_element_details_primary_button_margin_left">102dp</dimen>
+    <dimen name="generic_template_element_details_primary_button_margin_right">102dp</dimen>
+    <dimen name="generic_template_element_details_secondary_button_margin_left">102dp</dimen>
+    <dimen name="generic_template_element_details_secondary_button_margin_right">102dp</dimen>
+    <item format="float" name="default_conversation_container_layout_weight_left" type="integer">0.3</item>
+    <item format="float" name="default_conversation_container_layout_weight_right" type="integer">0.7</item>
+    <item format="float" name="default_conversation_container_layout_weight_sum" type="integer">1.0</item>
+</resources>

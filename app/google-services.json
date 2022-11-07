@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "395852511315",
+    "project_id": "wxccmsteam",
+    "storage_bucket": "wxccmsteam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395852511315:android:e8fb0e877eca200d76aea6",
+        "android_client_info": {
+          "package_name": "com.imimobile.connectdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395852511315-hh5rn05cgdd5n6h2bl545mrd4sqork16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIRPcB8z4nIcaxNm48JlunGNWxMmQq3_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395852511315-hh5rn05cgdd5n6h2bl545mrd4sqork16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

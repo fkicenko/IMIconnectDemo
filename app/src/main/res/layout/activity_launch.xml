@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/v_separator_line">
+
+        <include layout="@layout/content_splash" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:text="@string/login_button_title"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/v_separator_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/btn_login"
+        android:background="@color/app_item_divider" />
+
+    <TextView
+        android:id="@+id/tv_sdk_version"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_above="@+id/v_separator_line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="right|center_horizontal"
+        android:paddingRight="8dp"
+        android:textColor="#757575"
+        android:textSize="12sp" />
+
+</RelativeLayout>

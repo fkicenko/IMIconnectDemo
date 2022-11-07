@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.imimobile.connectdemo.app-mergeDebugResources-4:/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\frkic\\.gradle\\caches\\transforms-3\\cc01e08be3ca40ff4bd4a04c400406cd\\transformed\\jetified-IMIconnectUI\\res\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,197,269,361,454,548,643,751,860",
+                        "endColumns": "67,73,71,91,92,93,94,107,108,106",
+                        "endOffsets": "118,192,264,356,449,543,638,746,855,962"
+                    }
+                }
+            ]
+        }
+    ]
+}

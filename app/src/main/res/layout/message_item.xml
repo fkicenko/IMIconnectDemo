@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:duplicateParentState="true"
+    android:minHeight="58dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/app_padding_normal">
+
+    <TextView
+        android:id="@+id/tv_avatar"
+        android:layout_width="@dimen/app_avatar_size"
+        android:layout_height="@dimen/app_avatar_size"
+        android:layout_marginRight="@dimen/app_padding_normal"
+        android:background="@drawable/bg_round_avatar"
+        android:gravity="center"
+        android:text="[A]"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/app_text_size_item_title" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- delimiter -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/app_item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/app_padding_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="[title]"
+                    android:textSize="@dimen/app_text_size_item_title" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/app_padding_narrow"
+                    android:text="[time]"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/app_text_size_item_metadata" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_last_message"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="[last message]"
+                android:textSize="@dimen/app_text_size_item_subtitle" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+
